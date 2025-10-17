@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OntoZoo - Ontology Embedding Models</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <h1>OntoZoo</h1>
+                    <div class="tagline">Ontology Embedding Models</div>
+                </div>
+                <input type="text" class="search-bar" placeholder="Search models..." id="searchBar">
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="filters">
+            <button class="filter-chip active" data-filter="all">All Models</button>
+            <button class="filter-chip" data-filter="snomed">SNOMED-CT</button>
+            <button class="filter-chip" data-filter="anatomy">ANATOMY</button>
+            <button class="filter-chip" data-filter="galen">GALEN</button>
+            <button class="filter-chip" data-filter="go">GO</button>
+        </div>
+
+        <div class="model-grid" id="modelGrid">
+            
+            <!-- HiT: SNOMED-CT 2023 -->
+
+            <div class="model-card" data-tags="snomed">
+                <div class="model-header">
+                    <div class="model-name">Hierarchy-Transformers/HiT-MiniLM-L12-SnomedCT</div>
+                    <div class="model-type">SNOMED-CT (23) - HiT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">367k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://huggingface.co/datasets/Hierarchy-Transformers/SnomedCT">Hierarchy-Transformers/SnomedCT</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    HiT-MiniLM-L12-SnomedCT is a HiT model trained on SNOMED-CT's concept subsumption hierarchy (TBox).
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/KRR-Oxford/HierarchyTransformers" class="btn" target="_blank">GitHub</a>
+                    <a href="https://huggingface.co/Hierarchy-Transformers/HiT-MiniLM-L12-SnomedCT" class="btn" target="_blank">HF Model</a>
+                    <a href="https://arxiv.org/abs/2401.11374" class="btn" target="_blank">Paper</a>
+                </div>
+            </div>
+
+            <!-- OnT: ANATOMY 384 -->
+            
+            <div class="model-card" data-tags="anatomy">
+                <div class="model-header">
+                    <div class="model-name">Hui97/OnT-MiniLM-L12-anatomy</div>
+                    <div class="model-type">ANATOMY - OnT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">26.7k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://zenodo.org/records/17314434">OnT Zenodo Datasets</a>                    
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    OnT model (ANATOMY), with base model all-MiniLM-L12-v2.
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/HuiYang1997/OnT" class="btn" target="_blank">GitHub</a>
+                    <a href="https://huggingface.co/Hui97/OnT-MiniLM-L12-anatomy" class="btn" target="_blank">HF Model</a>
+                    <a href="https://www.arxiv.org/abs/2507.14334" class="btn" target="_blank">Paper</a>
+                </div>
+            </div>
+
+            <!-- OnT: ANATOMY 768 -->
+
+            <div class="model-card" data-tags="anatomy">
+                <div class="model-header">
+                    <div class="model-name">Hui97/OnT-MPNet-anatomy</div>
+                    <div class="model-type">ANATOMY - OnT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">768</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">26.7k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://zenodo.org/records/17314434">OnT Zenodo Datasets</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2">all-mpnet-base-v2</a>
+                </div>
+                <div class="model-description">
+                    OnT model (ANATOMY), with base model all-mpnet-base-v2.
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/HuiYang1997/OnT" class="btn" target="_blank">GitHub</a>
+                    <a href="https://huggingface.co/Hui97/OnT-MPNet-anatomy" class="btn" target="_blank">HF Model</a>
+                    <a href="https://www.arxiv.org/abs/2507.14334" class="btn" target="_blank">Paper</a>
+                </div>
+            </div>
+
+            <!-- OnT: GALEN 384 -->
+
+            <div class="model-card" data-tags="galen">
+                <div class="model-header">
+                    <div class="model-name">Hui97/OnT-MiniLM-L12-galen</div>
+                    <div class="model-type">ANATOMY - OnT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">23.1k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://zenodo.org/records/17314434">OnT Zenodo Datasets</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    OnT model (GALEN), with base model all-MiniLM-L12-v2.
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/HuiYang1997/OnT" class="btn" target="_blank">GitHub</a>
+                    <a href="https://huggingface.co/Hui97/OnT-MiniLM-L12-galen" class="btn" target="_blank">HF Model</a>
+                    <a href="https://www.arxiv.org/abs/2507.14334" class="btn" target="_blank">Paper</a>
+                </div>
+            </div>
+
+            <!-- OnT: GALEN 768 -->
+
+            <div class="model-card" data-tags="galen">
+                <div class="model-header">
+                    <div class="model-name">Hui97/OnT-MPNet-galen</div>
+                    <div class="model-type">GALEN - OnT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">768</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">23.1k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://zenodo.org/records/17314434">OnT Zenodo Datasets</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2">all-mpnet-base-v2</a>
+                </div>
+                <div class="model-description">
+                    OnT model (GALEN), with base model all-mpnet-base-v2.
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/HuiYang1997/OnT" class="btn" target="_blank">GitHub</a>
+                    <a href="https://huggingface.co/Hui97/OnT-MPNet-galen" class="btn" target="_blank">HF Model</a>
+                    <a href="https://www.arxiv.org/abs/2507.14334" class="btn" target="_blank">Paper</a>
+                </div>
+            </div>
+
+            <!-- OnT: GO 384 -->
+
+            <div class="model-card" data-tags="go">
+                <div class="model-header">
+                    <div class="model-name">Hui97/OnT-MiniLM-L12-go</div>
+                    <div class="model-type">GENE ONTOLOGY - OnT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">51.8k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://zenodo.org/records/17314434">OnT Zenodo Datasets</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    OnT model (Gene Ontology), with base model all-MiniLM-L12-v2.
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/HuiYang1997/OnT" class="btn" target="_blank">GitHub</a>
+                    <a href="https://huggingface.co/Hui97/OnT-MiniLM-L12-go" class="btn" target="_blank">HF Model</a>
+                    <a href="https://www.arxiv.org/abs/2507.14334" class="btn" target="_blank">Paper</a>
+                </div>
+            </div>
+
+            <!-- OnT: GO 768 -->
+
+            <div class="model-card" data-tags="go">
+                <div class="model-header">
+                    <div class="model-name">Hui97/OnT-MPNet-go</div>
+                    <div class="model-type">GENE ONTOLOGY - OnT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">768</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">51.8k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://zenodo.org/records/17314434">OnT Zenodo Datasets</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2">all-mpnet-base-v2</a>
+                </div>
+                <div class="model-description">
+                    OnT model (Gene Ontology), with base model all-mpnet-base-v2.
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/HuiYang1997/OnT" class="btn" target="_blank">GitHub</a>
+                    <a href="https://huggingface.co/Hui97/OnT-MPNet-go" class="btn" target="_blank">HF Model</a>
+                    <a href="https://www.arxiv.org/abs/2507.14334" class="btn" target="_blank">Paper</a>
+                </div>
+            </div>
+
+            <!-- HiT: SNOMED-CT 2025 -->
+
+            <div class="model-card" data-tags="snomed">
+                <div class="model-header">
+                    <div class="model-name">uom-thesis/HiT-mixed-SNOMED-25</div>
+                    <div class="model-type">SNOMED-CT (25) - HiT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">376k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://github.com/jonathondilworth/uom-thesis?tab=readme-ov-file#snomed-ct-tuned-models">Re-construct (Requires Licensed RF2)</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    HiT model trained on SNOMED CT full release (2025).
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/jonathondilworth/uom-thesis" class="btn" target="_blank">GitHub</a>
+                    <a href="https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view" class="btn" target="_blank">Google Download</a>
+                </div>
+            </div>
+
+            <!-- OnT: SNOMED-CT 2025 FULL -->
+
+            <div class="model-card" data-tags="snomed">
+                <div class="model-header">
+                    <div class="model-name">uom-thesis/OnTr-snomed25-uni</div>
+                    <div class="model-type">SNOMED-CT (25) - OnT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">376k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://github.com/jonathondilworth/uom-thesis?tab=readme-ov-file#snomed-ct-tuned-models">Re-construct (Requires Licensed RF2)</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    OnT model trained on SNOMED CT full release (2025).
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/jonathondilworth/uom-thesis" class="btn" target="_blank">GitHub</a>
+                    <a href="https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view" class="btn" target="_blank">Google Download</a>
+                </div>
+            </div>
+
+            <!-- OnT: SNOMED-CT 2025 Mini 32 -->
+
+            <div class="model-card" data-tags="snomed">
+                <div class="model-header">
+                    <div class="model-name">uom-thesis/OnTr-m-32</div>
+                    <div class="model-type">SNOMED-CT (25) - Miniature - OnT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">50k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://github.com/jonathondilworth/uom-thesis?tab=readme-ov-file#snomed-ct-tuned-models">Re-construct (Requires Licensed RF2)</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    OnT model trained on SNOMED CT (2025, <strong>only:</strong> Body Structure, Clinical Finding, Event, Procedure), with a batch size of 32.
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/jonathondilworth/uom-thesis" class="btn" target="_blank">GitHub</a>
+                    <a href="https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view" class="btn" target="_blank">Google Download</a>
+                </div>
+            </div>
+
+            <!-- OnT: SNOMED-CT 2025 Mini 64 -->
+
+            <div class="model-card" data-tags="snomed">
+                <div class="model-header">
+                    <div class="model-name">uom-thesis/OnTr-minified-64</div>
+                    <div class="model-type">SNOMED-CT (25) - Miniature - OnT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">50k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://github.com/jonathondilworth/uom-thesis?tab=readme-ov-file#snomed-ct-tuned-models">Re-construct (Requires Licensed RF2)</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    OnT model trained on SNOMED CT (2025, <strong>only:</strong> Body Structure, Clinical Finding, Event, Procedure), with a batch size of 64.
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/jonathondilworth/uom-thesis" class="btn" target="_blank">GitHub</a>
+                    <a href="https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view" class="btn" target="_blank">Google Download</a>
+                </div>
+            </div>
+
+            <!-- OnT: SNOMED-CT 2025 Mini 128 -->
+
+            <div class="model-card" data-tags="snomed">
+                <div class="model-header">
+                    <div class="model-name">uom-thesis/OnTr-m-128</div>
+                    <div class="model-type">SNOMED-CT (25) - Miniature - OnT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">50k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="https://github.com/jonathondilworth/uom-thesis?tab=readme-ov-file#snomed-ct-tuned-models">Re-construct (Requires Licensed RF2)</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    OnT model trained on SNOMED CT (2025, <strong>only:</strong> Body Structure, Clinical Finding, Event, Procedure), with a batch size of 128.
+                </div>
+                <div class="model-actions">
+                    <a href="https://github.com/jonathondilworth/uom-thesis" class="btn" target="_blank">GitHub</a>
+                    <a href="https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view" class="btn" target="_blank">Google Download</a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    
+    <script>
+        // filtering functionality:
+        document.querySelectorAll('.filter-chip').forEach(chip => {
+            chip.addEventListener('click', function() {
+                document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.model-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.tags.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        // searching functionality:
+        document.getElementById('searchBar').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            document.querySelectorAll('.model-card').forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
