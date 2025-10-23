@@ -469,6 +469,78 @@
                 </div>
             </div>
 
+            <!-- OnT: SNOMED-CT 2025 FULL EXT \w cosine annealing -->
+
+            <div class="model-card" data-tags="snomed">
+                <div class="model-header">
+                    <div class="model-name">OnT-MiniLM-L12-FULL-EXT-25</div>
+                    <div class="model-type">SNOMED-CT (25) - Full Onto - Custom OnT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">376k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="#">Requires Licensed RF2</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    Note that for the <strong>full</strong> ontology, this appears to be the best performing OnT model (at least, for retrieval tasks). Trained on SNOMED CT (2025, September Release) with a batch size of 64. Trained over ~22k steps. Keywords: cosine annealing, extended training run, downweighted logical loss (0.75). Used in preperation for ACM submission. GitHub & Paper TBA.
+                </div>
+                <div class="model-actions">
+                    <a href="https://ontozoo.io/models/OnT-all-MiniLM-L12-v2-FULL-EXT-25.zip" class="btn" target="_blank">Direct Download</a>
+                </div>
+            </div>
+
+            <!-- OnT: SNOMED-CT 2025 FULL EXT \w cosine annealing -->
+
+            <div class="model-card" data-tags="snomed">
+                <div class="model-header">
+                    <div class="model-name">HiT-MiniLM-L12-FULL-EXT-25</div>
+                    <div class="model-type">SNOMED-CT (25) - HiT</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">376k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="#">Requires Licensed RF2</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    HiT model, trained on SNOMED CT <strong>(full)</strong>. Extended training run on H200 GPU instance, marginally better performance.
+                </div>
+                <div class="model-actions">
+                    <a href="https://ontozoo.io/models/HiT-all-MiniLM-L12-v2-FULL-EXT-25.zip" class="btn" target="_blank">Direct Download</a>
+                </div>
+            </div>
+
+            <!-- END OF MODEL CARDS -->
+
         </div>
 
     </main>
