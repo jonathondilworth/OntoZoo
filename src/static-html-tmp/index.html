@@ -576,6 +576,76 @@
 
             <!-- END OF MODEL CARDS -->
 
+            <div class="model-card" data-tags="snomed">
+                <div class="model-header">
+                    <div class="model-name">HR-OOV/OnT-96</div>
+                    <div class="model-type">SNOMED-CT (25) - Full Onto - Custom OnT Checkpoint</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">376k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="#">Requires Licensed RF2</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    Alternative model checkpoint trained with a batch size of 96, based on OnT-MiniLM-L12-FULL. Used for ACM submission.
+                </div>
+                <div class="model-actions">
+                    <a href="https://ontozoo.io/models/OnT-96-ckpt.zip" class="btn" target="_blank">Direct Download</a>
+                    <a href="https://github.com/jonathondilworth/HR-OOV" class="btn" target="_blank">GitHub</a>
+                    <a href="https://arxiv.org/abs/2511.16698" class="btn" target="_blank">Paper</a>
+                </div>
+            </div>
+
+            <!-- HiT: Hard Negatives -->
+
+            <div class="model-card" data-tags="snomed">
+                <div class="model-header">
+                    <div class="model-name">HiT-mixed-hard-SNOMED-25</div>
+                    <div class="model-type">SNOMED-CT (25) - HiT - Hard Negatives</div>
+                </div>
+                <div class="model-stats">
+                    <div class="stat">
+                        <span class="stat-label">Dims:</span>
+                        <span class="stat-value">384</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Concepts:</span>
+                        <span class="stat-value">376k</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label"></span>
+                        <span class="stat-value"></span>
+                    </div>
+                </div>
+                <div class="model-training">
+                    <strong>Dataset: </strong> <a href="#">Requires Licensed RF2</a>
+                </div>
+                <div class="model-training">
+                    <strong>Base Model: </strong> <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2">all-MiniLM-L12-v2</a>
+                </div>
+                <div class="model-description">
+                    HiT model trained on SNOMED CT full release (01/09/2025) using Hard Negatives.
+                </div>
+                <div class="model-actions">
+                    <a href="https://ontozoo.io/models/HiT_mixed_hard.zip" class="btn" target="_blank">Direct Download</a>
+                </div>
+            </div>
+
         </div>
 
     </main>
